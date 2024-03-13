@@ -33,3 +33,35 @@ const population = 120;
 console.log(countery, continent, population);
 
 // LECTURE: Data Types
+const isIsland = false;
+let language;
+console.log(typeof isIsland);
+console.log(typeof population);
+console.log(typeof countery);
+console.log(typeof language);
+
+// LECTURE: let, const and var
+language = "Amharic";
+
+// LECTURE: Basic Operators
+let countery2 = population / 2;
+console.log(countery2);
+const description = `Ethiopia is in Africa, and its ${population} million people speak ${language}!`
+console.log(description);
+
+// First coding challenge
+const markMass = 95;
+const markHeight = 1.88;
+const johnMass = 85;
+const johnHeight = 1.76;
+const markBMI = markMass / markHeight ** 2;
+const johnBMI = johnMass / johnHeight ** 2;
+const markHigherBMI = markBMI > johnBMI;
+console.log(markBMI, johnBMI, markHigherBMI);
+
+// Second Coding Challenge
+if (markHigherBMI) {
+    console.log(`Mark's BMI ${markBMI} is higher than John's ${johnBMI}!`)
+} else {
+    console.log(`John's BMI ${johnBMI} is higher than Mark's! ${markBMI}`);
+}
