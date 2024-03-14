@@ -65,3 +65,21 @@ if (markHigherBMI) {
 } else {
     console.log(`John's BMI ${johnBMI} is higher than Mark's! ${markBMI}`);
 }
+
+// Thired Coding Challenge
+const dolphinsAvarageScore = (97 + 112 + 101) / 3;
+const koalasAvarageScore = (109 + 91 + 110) / 3;
+if(dolphinsAvarageScore > koalasAvarageScore && dolphinsAvarageScore >= 100) {
+    console.log("Dolphins has higher score than Koalas!");
+} else if(koalasAvarageScore > dolphinsAvarageScore && koalasAvarageScore >= 100) {
+    console.log("Koalas has higher score than Dolphins!");
+}else if(koalasAvarageScore === dolphinsAvarageScore && dolphinsAvarageScore >= 100 && koalasAvarageScore >= 100){
+    console.log("They are draw!");
+} else {
+    console.log("no one wins the game!");
+}
+
+// Fourth Coding Challenge
+const bill = 430;
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
