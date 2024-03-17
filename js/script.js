@@ -83,3 +83,33 @@ if(dolphinsAvarageScore > koalasAvarageScore && dolphinsAvarageScore >= 100) {
 const bill = 430;
 const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+
+// Fifth coding challenge
+const calcAvarage = (score1, score2, score3) => (score1+score2+score3)/3;
+
+const checkWinner = function(avgDolhins , avrKoalas) {
+    if (avgDolhins >= 2 * avrKoalas) {
+        console.log(`Dolhins win (${avgDolhins} vs. ${avrKoalas})`);
+    } else if (avrKoalas >= 2 * avgDolhins) {
+        onsole.log(`Koalas win (${avrKoalas} vs. ${avgDolhins})`);
+    } else {
+        console.log(`no team wins!`);
+    }
+}
+checkWinner(calcAvarage(44,23,71),calcAvarage(65,54,49));
+checkWinner(calcAvarage(85,54,41),calcAvarage(23,34,27));
+
+// Sixth coding challenge
+const calctip = function(bill) {
+    let tip1 ;
+    if (bill >= 50 && bill <= 300 ) {
+        tip1 = bill * 0.15;
+    } else {
+        tip1 = bill * 0.2;
+    }
+    return tip1;
+}
+const bills = [125, 555, 44];
+const tips = [calctip(bills[0]), calctip(bills[1]), calctip(bills[bills.length - 1])];
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[bills.length - 1] + tips[bills.length - 1]];
+console.log(tips , total);
