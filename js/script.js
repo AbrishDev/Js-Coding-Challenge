@@ -113,3 +113,13 @@ const bills = [125, 555, 44];
 const tips = [calctip(bills[0]), calctip(bills[1]), calctip(bills[bills.length - 1])];
 const total = [bills[0] + tips[0], bills[1] + tips[1], bills[bills.length - 1] + tips[bills.length - 1]];
 console.log(tips , total);
+
+// bonus challenge
+const abrham = {
+    firstName: "Abrham",
+    lastName: "Desalegn",
+    age: 23,
+    friends: ["Henok" , "Dagi" , "dani"]
+};
+
+console.log(`${abrham.firstName} has ${abrham.friends.length} friends, and his best friend is called ${abrham.friends[0]}`);
