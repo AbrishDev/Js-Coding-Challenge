@@ -1,3 +1,4 @@
+/*
 // The sum of a Range
 let range = function(start,end){
     let listOfNumber = [];
@@ -114,6 +115,7 @@ const tips = [calctip(bills[0]), calctip(bills[1]), calctip(bills[bills.length -
 const total = [bills[0] + tips[0], bills[1] + tips[1], bills[bills.length - 1] + tips[bills.length - 1]];
 console.log(tips , total);
 
+*/
 // bonus challenge
 const abrham = {
     firstName: "Abrham",
@@ -123,3 +125,60 @@ const abrham = {
 };
 
 console.log(`${abrham.firstName} has ${abrham.friends.length} friends, and his best friend is called ${abrham.friends[0]}`);
+
+// Seven Coding challenge
+const mark = {
+    fullName: "Mark Miller",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function() {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
+
+const john = {
+    fullName: "John Smith",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function() {
+        return this.mass / this.height ** 2;
+    }
+};
+mark.calcBMI();
+john.calcBMI();
+console.log(mark.bmi);
+console.log(john.bmi);
+
+mark.calcBMI() > john.calcBMI() ? console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s (${john.calcBMI()})`) : console.log(`${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${mark.fullName}'s (${mark.calcBMI()})`);
+
+// Eighth coding challenge
+
+const bills =  [22,295,176,440,37,185,18,1100,86,52];
+const tips = [];
+const totals = [];
+const calctip = function(bill) {
+    let tip1 ;
+    if (bill >= 50 && bill <= 300 ) {
+        tip1 = bill * 0.15;
+    } else {
+        tip1 = bill * 0.2;
+    }
+    return tip1;
+}
+
+for(let i = 0; i < bills.length; i++) {
+    tips[i] = calctip(bills[i]);
+    totals[i] = bills[i] + tips[i];
+}
+
+const calcAverage = function(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(totals);
+console.log(calcAverage(totals));
