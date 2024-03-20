@@ -182,3 +182,5 @@ const calcAverage = function(arr) {
 
 console.log(totals);
 console.log(calcAverage(totals));
+
+// Nigneth coding challenge
